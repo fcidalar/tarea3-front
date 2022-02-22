@@ -1,0 +1,15 @@
+<div class="card-group">
+    <app-card (selectGame)="addCarrito($event);" (recargarPagina)="setUp();" [dataInput]="data" [indexInput]="i" *ngFor="let data of items; let i = index;"></app-card>
+</div>
+
+<hr>
+
+<div class="container-fluid py-5">
+    <h1 class="display-5 fw-bold">Carrito</h1>
+    <div *ngIf="carrito.length > 0">
+        <app-carrito (gameDelete)="deleteElement($event)" [indexElement]="i"  [data]="item" *ngFor="let item of carrito;let i = index"></app-carrito>
+    </div>
+
+    <p *ngIf="carrito.length == 0" class="col-md-8 fs-4"> No hay elementos en el carrito.</p>    
+  </div>
+

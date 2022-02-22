@@ -1,0 +1,40 @@
+<div class="container">
+    <h1>Pantalla de Edición</h1>
+    <form autocomplete="off" [formGroup]="forma" (ngSubmit)="guardar()">
+        <div class="form-group row">
+            <label class="col-2 col-form-label">Titulo</label>
+            <div class="col-8">
+                <input type="text" name="titulo" placeholder="Ingrese" formControlName="titulo">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-2 col-form-label">Descripción</label>
+            <div class="col-8">
+                <input type="text" name="descripcion" placeholder="Ingrese descripción" formControlName="descripcion">
+            </div>
+        </div>  
+        <div class="form-group row">
+            <label class="col-2 col-form-label">Plataforma</label>
+            <div class="col-8">
+                <input type="text" name="plataforma" placeholder="Ingrese plataforma" formControlName="plataforma">
+            </div>
+        </div> 
+        <div class="form-group row">
+            <label class="col-2 col-form-label">img</label>
+            <div class="col-8">
+                <input type="text" name="imagen" placeholder="Ingrese img" formControlName="imagen">
+            </div>
+        </div>   
+        <div class="form-group row">
+            <label class="col-2 col-form-label">&nbsp;</label>
+            
+            <div class="input-group col">
+                <a class="btn btn-outline-primary" [routerLink]="['/games']"> Volver</a>
+              <button type="submit" class="btn btn-outline-primary btn-block">
+                Guardar
+              </button>
+            </div>
+          </div>  
+    </form>
+</div>
+

@@ -1,0 +1,13 @@
+
+<div class="card text-center" style="width: 18rem;">
+    <img class="card-img-top img-fluid" [src]="dataInput.img">
+    <div class="card-body">
+      <h5 class="card-title">{{dataInput.name}}</h5>
+      <p class="card-text">{{dataInput.description}}</p>
+      <p class="card-text">{{dataInput.platform}}</p>
+      <button class="btn btn-primary" (click)="detailGame(indexInput)"> Ver detalle</button>
+      <button class="btn btn-danger m-1" (click)="deleteGame(indexInput)"> Eliminar</button>        
+      <hr>
+      <a class="btn btn-primary" (click)="buyGame()">Comprar</a>
+    </div>
+  </div>

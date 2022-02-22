@@ -1,0 +1,19 @@
+<h1> Estas mirando {{game?.name}}</h1>
+<hr>
+<div class="row">
+    <div class="col-md-4">
+        <img [src]="game?.img" class="img-fluid">
+        <br><br>
+    </div>    
+        <div class="col-md-8">
+            <h3>{{game?.name}}</h3>
+            <hr>
+            <p> Descripción {{game?.description}}</p>
+            <div>
+                <p> Plataforma : {{game?.platform}}</p>
+            </div>
+            <a class="btn btn-outline-primary" [routerLink]="['/games']"> Volver</a>
+            <a class="btn btn-outline-primary" [routerLink]="['/editgame',id]"> Editar</a>
+        </div>
+    
+</div>
